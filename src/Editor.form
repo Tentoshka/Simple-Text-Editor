@@ -47,7 +47,9 @@
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <horizontalScrollBarPolicy value="31"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="8a00c" class="javax.swing.JTextArea" binding="editorArea">
@@ -64,6 +66,8 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <focusable value="false"/>
+          <opaque value="true"/>
           <visible value="false"/>
         </properties>
         <border type="none"/>
@@ -91,6 +95,8 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <margin top="0" left="0" bottom="0" right="0"/>
+              <opaque value="false"/>
               <text value="OK"/>
               <visible value="true"/>
             </properties>
