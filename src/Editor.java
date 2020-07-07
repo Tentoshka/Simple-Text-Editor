@@ -2,10 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 
 public class Editor {
@@ -19,6 +16,7 @@ public class Editor {
     private JTextField linkFile;
     private JPanel linkPane;
     private JButton OKButton;
+    private JButton filesButton;
 
     private boolean isOpen = false;
     private String link;
@@ -75,6 +73,17 @@ public class Editor {
                     editorArea.setText(ex.getMessage());
                     saveButton.setEnabled(isOpen);
                     editorArea.setEditable(isOpen);
+                }
+            }
+        });
+        filesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileopen = new JFileChooser();
+                int ret = fileopen.showDialog(null, "Открыть файл");
+                if (ret == JFileChooser.APPROVE_OPTION) {
+                    File file = fileopen.getSelectedFile();
+                    linkFile.setText(file.getPath());
                 }
             }
         });
